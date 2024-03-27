@@ -1,0 +1,15 @@
+# Essential packages
+git
+curl
+bash-completion
+vim
+nano
+tmux
+tmuxp
+python3-pip
+sudo
+build-essential
+ssh
+
+# Utils
+joystick
