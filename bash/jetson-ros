@@ -4,4 +4,4 @@ alias python=python3
 eval "$(register-python-argcomplete3 ros2)"
 eval "$(register-python-argcomplete3 colcon)"
 
-cd /race_common
+cd /robocar

@@ -1,3 +1,3 @@
-cd /race_common
+cd /robocar
 
 make
