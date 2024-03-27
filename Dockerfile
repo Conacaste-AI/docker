@@ -61,7 +61,6 @@ RUN --mount=type=ssh \
     DEBIAN_FRONTEND=noninteractive /bin/sh /tmp/base-install.sh && \
     rm -rf /tmp/base-install 
 
-
 # Run the custom install file
 ARG CUSTOM_INSTALL_FILE
 COPY custom/${CUSTOM_INSTALL_FILE} /tmp/${CUSTOM_INSTALL_FILE}
