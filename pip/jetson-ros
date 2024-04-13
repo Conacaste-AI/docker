@@ -6,3 +6,11 @@ matplotlib
 crcmod
 pyserial
 supyr-struct
+
+# Robocar
+git+https://github.com/LiamBindle/PyVESC.git@master
+pyramid
+python-dotenv
+pymongo
+tornado
+pyserial

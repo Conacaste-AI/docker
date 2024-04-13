@@ -1,7 +1,12 @@
+echo "Hold on, setting up the environment..."
+
 alias python=python3
+
+. /ros2_iron/install/setup.bash
 
 # argcomplete for ros2 & colcon
 eval "$(register-python-argcomplete3 ros2)"
 eval "$(register-python-argcomplete3 colcon)"
 
 cd /robocar
+. install/setup.bash

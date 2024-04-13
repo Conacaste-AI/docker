@@ -14,6 +14,19 @@ apt update
 apt install -y ros-dev-tools
 
 echo "America/Los_Angeles" > /etc/timezone
-apt install -y ros-iron-desktop
+
+# Install ROS 2 from source
+mkdir -p /ros2_iron/src && cd /ros2_iron/
+vcs import --input https://raw.githubusercontent.com/ros2/ros2/iron/ros2.repos src
+
+sudo rosdep init
+rosdep update
+rosdep install --from-paths src --ignore-src -y --skip-keys "fastcdr rti-connext-dds-6.0.1 urdfdom_headers libopencv-dev" --os=ubuntu:jammy
+
+
+pip3 install setuptools
+# Not sure why python3.9 is installed, but it's causing issues with colcon
+sudo apt autoremove python3.9* -y
+cd /ros2_iron/ && colcon build --symlink-install
 
 sudo apt clean && sudo rm -rf /var/lib/apt/lists/*

@@ -1,5 +1,4 @@
-# Race common
-python3-vcstool
 
-# Pytorch
+# Pytorch and tensorflow
 libopenblas-dev
+libhdf5-dev
