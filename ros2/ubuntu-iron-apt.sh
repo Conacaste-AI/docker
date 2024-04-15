@@ -2,6 +2,7 @@ sudo apt update && sudo apt install -y locales
 sudo locale-gen en_US en_US.UTF-8
 sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 export LANG=en_US.UTF-8
+export TZ=America/Los_Angeles
 
 sudo apt install software-properties-common -y
 sudo add-apt-repository universe -y
@@ -13,7 +14,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 apt update
 apt install -y ros-dev-tools
 
-echo "America/Los_Angeles" > /etc/timezone
+
 
 # Install ROS 2 from source
 mkdir -p /ros2_iron/src && cd /ros2_iron/
